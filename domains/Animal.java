@@ -5,18 +5,20 @@ import interfaces.IAnimalType;
 
 public class Animal implements IAlive {
     private final IAnimalType animalType;
-    private int food;
-    private final int id;
+    private final int food;
+    private final String identificationName;
 
     @Override
     public int getFood() {
         return this.food;
     }
 
-    public Animal(IAnimalType animalType, int food, int id) {
+    public String getIdentificationName() { return this.identificationName; }
+
+    public Animal(IAnimalType animalType, int food, String identificationName) {
         this.animalType = animalType;
         this.food = food;
-        this.id = id;
+        this.identificationName = identificationName;
     }
 
     public boolean isInteractiveAllowed() {
