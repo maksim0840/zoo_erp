@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ZooErpApplication.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">zoo_erp</a> &gt; <a href="index.source.html" class="el_package">erp</a> &gt; <span class="el_source">ZooErpApplication.java</span></div><h1>ZooErpApplication.java</h1><pre class="source lang-java linenums">package erp;
+
+import erp.domains.Animal;
+import erp.domains.Herbo;
+import erp.domains.Predator;
+import erp.domains.animals.Monkey;
+import erp.domains.animals.Rabbit;
+import erp.domains.animals.Tiger;
+import erp.domains.animals.Wolf;
+import erp.domains.things.Computer;
+import erp.interfaces.IAnimalStorage;
+import erp.services.*;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+
+@SpringBootApplication
+<span class="fc" id="L21">public class ZooErpApplication {</span>
+    public static void main(String[] args) {
+<span class="nc" id="L23">        VetClinic vetClinic = new VetClinic();</span>
+
+<span class="nc" id="L25">        Wolf wolf = new Wolf(new Predator(), 199, &quot;wolfName&quot;);</span>
+<span class="nc" id="L26">        Rabbit rabbit = new Rabbit(new Herbo(10), 30, &quot;rabbitName&quot;);</span>
+<span class="nc" id="L27">        Tiger tiger = new Tiger(new Predator(), 575, &quot;tigerName&quot;);</span>
+<span class="nc" id="L28">        Monkey monkey = new Monkey(new Predator(), 100, &quot;monkeyName&quot;);</span>
+
+<span class="nc" id="L30">        ZooAnimalStorage animalStorage = new ZooAnimalStorage(vetClinic);</span>
+<span class="nc" id="L31">        animalStorage.addAnimal(wolf);</span>
+<span class="nc" id="L32">        animalStorage.addAnimal(rabbit);</span>
+<span class="nc" id="L33">        animalStorage.addAnimal(tiger);</span>
+<span class="nc" id="L34">        animalStorage.addAnimal(monkey);</span>
+<span class="nc" id="L35">        ZooAnimalService animalService = new ZooAnimalService(animalStorage);</span>
+
+<span class="nc" id="L37">        ZooThingStorage thingStorage = new ZooThingStorage();</span>
+<span class="nc" id="L38">        ZooThingService thingService = new ZooThingService(thingStorage);</span>
+
+<span class="nc" id="L40">        Scanner scanner = new Scanner(System.in);</span>
+
+
+
+        while (true) {
+<span class="nc" id="L45">            System.out.print(&quot;Введите команду: &quot;);</span>
+<span class="nc" id="L46">            String command = scanner.nextLine().trim();</span>
+
+<span class="nc bnc" id="L48" title="All 3 branches missed.">            switch (command.toLowerCase()) {</span>
+                case &quot;gettotalfood&quot; -&gt;
+<span class="nc" id="L50">                        System.out.println(animalService.getTotalFood());</span>
+                case &quot;getinteractiveanimals&quot; -&gt;
+<span class="nc" id="L52">                        animalService.getInteractiveAnimals().stream().forEach(System.out::println);</span>
+
+
+            }
+<span class="nc" id="L56">        }</span>
+
+    }
+}
+/*
+getTotalFood
+getInteractiveAnimals
+getAnimalsNumber
+getAnimalsIdentificationName
+ */
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

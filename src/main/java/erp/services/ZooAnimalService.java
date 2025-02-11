@@ -2,10 +2,12 @@ package erp.services;
 
 import erp.domains.Animal;
 import erp.interfaces.IAnimalStorage;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class ZooAnimalService {
     IAnimalStorage animalStorage;
 
@@ -14,22 +16,22 @@ public class ZooAnimalService {
     }
 
     public int getTotalFood() {
-        return this.animalStorage.getAnimals().stream()
+        return animalStorage.getAnimals().stream()
                 .mapToInt(Animal::getFood).sum();
     }
 
     public List<Animal> getInteractiveAnimals() {
-        return this.animalStorage.getAnimals().stream()
+        return animalStorage.getAnimals().stream()
                 .filter(Animal::isInteractiveAllowed)
                 .collect(Collectors.toList());
     }
 
     public int getAnimalsNumber() {
-        return this.animalStorage.getAnimals().size();
+        return animalStorage.getAnimals().size();
     }
 
     public List<String> getAnimalsIdentificationName() {
-        return this.animalStorage.getAnimals().stream()
+        return animalStorage.getAnimals().stream()
                 .map(Animal::getIdentificationName)
                 .collect(Collectors.toList());
     }

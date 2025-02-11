@@ -7,7 +7,9 @@ import erp.interfaces.IApprover;
 import java.util.*;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ZooAnimalStorage implements IAnimalStorage {
     private final List<Animal> animals = new ArrayList<>();
     private IApprover approver = null;
@@ -26,7 +28,7 @@ public class ZooAnimalStorage implements IAnimalStorage {
         if (Objects.nonNull(approver)) {
             return false;
         }
-            animals.add(animal);
+        animals.add(animal);
         return true;
     }
 
@@ -39,24 +41,24 @@ public class ZooAnimalStorage implements IAnimalStorage {
     }
 
     @Override
-    public Optional<Animal> takeAnimal(Animal animal) {
+    public Animal takeAnimal(Animal animal) {
         var matchedAnimal = animals.stream()
                 .filter(animalInList -> EqualsBuilder.reflectionEquals(animalInList, animal))
                 .findFirst();
 
         matchedAnimal.ifPresent(animals::remove);
 
-        return matchedAnimal;
+        return matchedAnimal.orElse(null);
     }
 
     @Override
-    public Optional<Animal> takeAnimal(String identificationName) {
+    public Animal takeAnimal(String identificationName) {
         var matchedAnimal = animals.stream()
                 .filter(animal -> animal.getIdentificationName().equals(identificationName))
                 .findFirst();
 
         matchedAnimal.ifPresent(animals::remove);
 
-        return matchedAnimal;
+        return matchedAnimal.orElse(null);
     }
 }

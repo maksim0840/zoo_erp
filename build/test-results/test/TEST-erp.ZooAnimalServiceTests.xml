@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="erp.ZooAnimalServiceTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-11T20:30:46" hostname="user-Swift-SF314-512" time="0.112">
+  <properties/>
+  <testcase name="ZooAnimalService - тест получения количества еды для животных в зоопарке (getTotalFood)" classname="erp.ZooAnimalServiceTests" time="0.112"/>
+  <system-out><![CDATA[23:30:43.630 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [erp.ZooAnimalServiceTests]: ZooAnimalServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:30:43.818 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration erp.ZooErpApplication for test class erp.ZooAnimalServiceTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2025-02-11T23:30:46.002+03:00  INFO 93815 --- [    Test worker] erp.ZooAnimalServiceTests                : Starting ZooAnimalServiceTests using Java 21.0.6 with PID 93815 (started by user in /home/user/Documents/zoo_erp)
+2025-02-11T23:30:46.004+03:00  INFO 93815 --- [    Test worker] erp.ZooAnimalServiceTests                : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T23:30:46.925+03:00  INFO 93815 --- [    Test worker] erp.ZooAnimalServiceTests                : Started ZooAnimalServiceTests in 1.475 seconds (process running for 4.846)
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/home/user/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.15.11/a38b16385e867f59a641330f0362ebe742788ed8/byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

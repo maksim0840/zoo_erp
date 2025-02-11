@@ -7,6 +7,8 @@ public class Herbo implements IAnimalType {
 
     @Override
     public boolean isInteractiveAllowed() {
-        return this.kindness > 5;
+        return kindness > 5;
     }
+
+    public Herbo(int kindness) { this.kindness = kindness; }
 }

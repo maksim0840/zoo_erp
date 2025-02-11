@@ -1,16 +1,18 @@
 package erp.domains;
 
 import erp.interfaces.IInventory;
+import lombok.ToString;
 
+@ToString
 public class Thing implements IInventory {
     private final int number;
 
-    public Thing(int number) {
-        this.number = number;
-    }
-
     @Override
     public int getNumber() {
-        return this.number;
+        return number;
+    }
+
+    public Thing(int number) {
+        this.number = number;
     }
 }

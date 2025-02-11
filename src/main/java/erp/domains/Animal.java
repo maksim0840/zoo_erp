@@ -2,7 +2,9 @@ package erp.domains;
 
 import erp.interfaces.IAlive;
 import erp.interfaces.IAnimalType;
+import lombok.ToString;
 
+@ToString
 public class Animal implements IAlive {
     private final IAnimalType animalType;
     private final int food;
@@ -10,10 +12,10 @@ public class Animal implements IAlive {
 
     @Override
     public int getFood() {
-        return this.food;
+        return food;
     }
 
-    public String getIdentificationName() { return this.identificationName; }
+    public String getIdentificationName() { return identificationName; }
 
     public Animal(IAnimalType animalType, int food, String identificationName) {
         this.animalType = animalType;
