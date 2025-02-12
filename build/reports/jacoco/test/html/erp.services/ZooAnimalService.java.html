@@ -21,19 +21,19 @@ public class ZooAnimalService {
     }
 
     public List&lt;Animal&gt; getInteractiveAnimals() {
-<span class="nc" id="L24">        return animalStorage.getAnimals().stream()</span>
-<span class="nc" id="L25">                .filter(Animal::isInteractiveAllowed)</span>
-<span class="nc" id="L26">                .collect(Collectors.toList());</span>
+<span class="fc" id="L24">        return animalStorage.getAnimals().stream()</span>
+<span class="fc" id="L25">                .filter(Animal::isInteractiveAllowed)</span>
+<span class="fc" id="L26">                .collect(Collectors.toList());</span>
     }
 
     public int getAnimalsNumber() {
-<span class="nc" id="L30">        return animalStorage.getAnimals().size();</span>
+<span class="fc" id="L30">        return animalStorage.getAnimals().size();</span>
     }
 
     public List&lt;String&gt; getAnimalsIdentificationName() {
-<span class="nc" id="L34">        return animalStorage.getAnimals().stream()</span>
-<span class="nc" id="L35">                .map(Animal::getIdentificationName)</span>
-<span class="nc" id="L36">                .collect(Collectors.toList());</span>
+<span class="fc" id="L34">        return animalStorage.getAnimals().stream()</span>
+<span class="fc" id="L35">                .map(Animal::getIdentificationName)</span>
+<span class="fc" id="L36">                .collect(Collectors.toList());</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

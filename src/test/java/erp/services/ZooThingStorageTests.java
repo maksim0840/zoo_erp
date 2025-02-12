@@ -1,4 +1,4 @@
-package erp;
+package erp.services;
 
 import erp.domains.Animal;
 import erp.domains.Predator;

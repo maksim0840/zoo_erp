@@ -2,7 +2,9 @@
 
 import erp.interfaces.IAlive;
 import erp.interfaces.IAnimalType;
+import lombok.ToString;
 
+@ToString
 public class Animal implements IAlive {
     private final IAnimalType animalType;
     private final int food;
@@ -10,19 +12,19 @@ public class Animal implements IAlive {
 
     @Override
     public int getFood() {
-<span class="fc" id="L13">        return food;</span>
+<span class="fc" id="L15">        return food;</span>
     }
 
-<span class="nc" id="L16">    public String getIdentificationName() { return identificationName; }</span>
+<span class="fc" id="L18">    public String getIdentificationName() { return identificationName; }</span>
 
-<span class="fc" id="L18">    public Animal(IAnimalType animalType, int food, String identificationName) {</span>
-<span class="fc" id="L19">        this.animalType = animalType;</span>
-<span class="fc" id="L20">        this.food = food;</span>
-<span class="fc" id="L21">        this.identificationName = identificationName;</span>
-<span class="fc" id="L22">    }</span>
+<span class="fc" id="L20">    public Animal(IAnimalType animalType, int food, String identificationName) {</span>
+<span class="fc" id="L21">        this.animalType = animalType;</span>
+<span class="fc" id="L22">        this.food = food;</span>
+<span class="fc" id="L23">        this.identificationName = identificationName;</span>
+<span class="fc" id="L24">    }</span>
 
     public boolean isInteractiveAllowed() {
-<span class="nc" id="L25">        return animalType.isInteractiveAllowed();</span>
+<span class="fc" id="L27">        return animalType.isInteractiveAllowed();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

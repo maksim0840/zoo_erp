@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="erp.console.ConsoleAppTests" tests="13" skipped="0" failures="0" errors="0" timestamp="2025-02-12T19:05:07" hostname="user-Swift-SF314-512" time="0.23">
+  <properties/>
+  <testcase name="ConsoleApp - тест добавления животного в зоопарк через консоль (consoleAddAnimal)" classname="erp.console.ConsoleAppTests" time="0.037"/>
+  <testcase name="ConsoleApp - тест получения и удаления животного по его имени через консоль (consoleTakeAnimal)" classname="erp.console.ConsoleAppTests" time="0.012"/>
+  <testcase name="ConsoleApp - тест получения количества животных через консоль (consoleGetAnimalsNumber)" classname="erp.console.ConsoleAppTests" time="0.006"/>
+  <testcase name="ConsoleApp - тест получения контактных животных через консоль (consoleGetInteractiveAnimals)" classname="erp.console.ConsoleAppTests" time="0.005"/>
+  <testcase name="ConsoleApp - тест получения номеров предметов через консоль (consoleGetThingsNumber)" classname="erp.console.ConsoleAppTests" time="0.005"/>
+  <testcase name="ConsoleApp - тест добавления предмета через консоль (consoleAddThing)" classname="erp.console.ConsoleAppTests" time="0.004"/>
+  <testcase name="ConsoleApp - тест получения количества еды для животных через консоль (consoleGetTotalFood)" classname="erp.console.ConsoleAppTests" time="0.003"/>
+  <testcase name="ConsoleApp - тест создания предмета через консоль (consoleGenerateThing)" classname="erp.console.ConsoleAppTests" time="0.104"/>
+  <testcase name="ConsoleApp - тест получения имён контактных животных через консоль (consoleGetAnimalsIdentificationName)" classname="erp.console.ConsoleAppTests" time="0.004"/>
+  <testcase name="ConsoleApp - тест получения предметов через консоль (consoleGetThings)" classname="erp.console.ConsoleAppTests" time="0.003"/>
+  <testcase name="ConsoleApp - тест получения и удаления предмета по его номеру через консоль (consoleTakeThing)" classname="erp.console.ConsoleAppTests" time="0.002"/>
+  <testcase name="ConsoleApp - тест получения животных через консоль (consoleGetAnimals)" classname="erp.console.ConsoleAppTests" time="0.002"/>
+  <testcase name="ConsoleApp - тест создания животного через консоль (consoleGenerateAnimal)" classname="erp.console.ConsoleAppTests" time="0.006"/>
+  <system-out><![CDATA[22:05:05.390 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [erp.console.ConsoleAppTests]: ConsoleAppTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:05:05.499 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration erp.Main for test class erp.console.ConsoleAppTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2025-02-12T22:05:06.832+03:00  INFO 139177 --- [    Test worker] erp.console.ConsoleAppTests              : Starting ConsoleAppTests using Java 21.0.6 with PID 139177 (started by user in /home/user/Documents/zoo_erp)
+2025-02-12T22:05:06.833+03:00  INFO 139177 --- [    Test worker] erp.console.ConsoleAppTests              : No active profile set, falling back to 1 default profile: "default"
+2025-02-12T22:05:07.279+03:00  INFO 139177 --- [    Test worker] erp.console.ConsoleAppTests              : Started ConsoleAppTests in 0.728 seconds (process running for 2.733)
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/home/user/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.15.11/a38b16385e867f59a641330f0362ebe742788ed8/byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

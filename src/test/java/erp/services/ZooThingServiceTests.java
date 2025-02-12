@@ -1,4 +1,4 @@
-package erp;
+package erp.services;
 
 import erp.domains.Thing;
 import erp.domains.things.Computer;
